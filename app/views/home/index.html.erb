@@ -1,0 +1,17 @@
+<div class="card mb-3">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Forty Foot</h5>
+    <p class="card-text">weather:</br>
+
+      <%=@output['properties']['timeseries'][0]['data']['instant']['details']['air_temperature']%>
+      <%=@output['properties']['timeseries'][0]['data']['next_1_hours']['summary']['symbol_code']%>
+    </br>
+      <%=Time.parse(@output_tides['extremes'][0]['datetime']).getlocal %></br>
+      <%=@output_tides['extremes'][0]['state'] %>
+    </p>
+    <p class="card-text"><small class="text-muted">SeaSnamh</small></p>
+  </div>
+</div>
+
+
